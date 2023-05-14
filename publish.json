@@ -1,0 +1,7 @@
+{
+    "title": "US Fires 2020-2022",
+    "info": "This is a map that displays wildfires in the US on a yearly basis while coloring them based on size and in turn severity (largest fires are red).",
+    "coordinates": [38, -97],
+    "author": "Christopher Bullock",
+    "link": "https://christopherbullock.github.io/"
+}
