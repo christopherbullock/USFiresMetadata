@@ -474,16 +474,21 @@
       let textValue = ""
       switch (year) {
         case "2020":
-          textValue = "Fires in 2020"
+          textValue = "Fire acres in 2020"
           break;
         case "2021":
-          textValue = "Fires in 2021"
+          textValue = "Fires acres in 2021"
           break;
         case "2022":
-          textValue = "Fires in 2022"
+          textValue = "Fires acres in 2022"
           break;
         default:
-          textValue = "Fires in 2020"
+          textValue = "Fires acres in 2020"
+      };
+
+      const options = {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
       };
 
       legend.innerHTML = `<h5>${textValue}</h5>`;
@@ -495,11 +500,17 @@
         legend.innerHTML +=
           `<div class="d-flex flex-row justify-content-start">
       <span style="background:${color}"></span>
-      <label>${(breaks[i][0] * 1).toFixed(0)} &mdash; 
-      ${(breaks[i][1] * 1).toFixed(0)} acres</label>
+      <label>${(breaks[i][0] * 1).toLocaleString("en-US", options)} &mdash; 
+      ${(breaks[i][1] * 1).toLocaleString("en-US", options)}</label>
   </div>`
       }
     }
+
+    // create toLocaleString() options to format numbers to 0 decimal places
+
+
+
+    
 
     function addUi(counties) {
       // create the slider control
