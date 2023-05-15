@@ -272,7 +272,7 @@
 
     function undrawMap() {
       map.eachLayer(function (layer) {
-        if (layer.options.pane !== 'tilePane') {
+        if (layer.options.pane == 'bottom') {
           map.removeLayer(layer)
         }
       })
@@ -296,7 +296,7 @@
         options: {
           pane: 'middle',
           styles: {
-            color: "black",
+            color: "gray",
             weight: 1,
             fillOpacity: 0,
             interactive: false,
